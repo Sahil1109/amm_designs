@@ -6,8 +6,16 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { Submit } from "./ComponentStore";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
+const useStyles = makeStyles({
+  backButton: {
+    backgroundColor: "rgb(237, 141, 24)",
+    "&:hover": {
+      backgroundColor: "rgb(212,123,15)",
+    },
+  },
+});
 function ButtonForward(props) {
-  // const classes = useStyles();
+  const classes = useStyles();
   return (
     <div>
       <Submit
@@ -24,9 +32,10 @@ function ButtonForward(props) {
         startIcon={<ArrowBackIcon />}
         color="secondary"
         variant="contained"
+        className={classes.backButton}
         size="large"
       >
-        Go back
+        Revise my information
       </Submit>
     </div>
   );

@@ -9,7 +9,7 @@ import InputBase from "@material-ui/core/InputBase";
 export const Submit = styled(Button)(() => ({
   background: "#10c71c",
   width: "320px",
-  textTransform: "capitalize",
+  textTransform: "none",
   "&:hover": {
     background: "#13a81c",
   },
