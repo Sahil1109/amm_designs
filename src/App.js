@@ -4,6 +4,7 @@ import ButtonForward from "./Components/ButtonForward";
 import TextFieldAmm from "./Components/TextFieldAmm";
 import Radio from "./Components/Radio";
 import StyledSlider from "./Components/StyledSlider";
+import SearchField from "./Components/SearchField";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       <Radio></Radio>
       <br></br>
       <StyledSlider></StyledSlider>
+      <br></br>
+      <SearchField></SearchField>
+      <br></br>
     </div>
   );
 }
