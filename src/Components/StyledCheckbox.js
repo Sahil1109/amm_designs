@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
-import tick2 from "./tick2.png";
+import tick from "./tick.png";
 const useStyles = makeStyles({
   root: {
     "&:hover": {
@@ -38,7 +38,7 @@ const useStyles = makeStyles({
       width: 18,
       height: 18,
       backgroundColor: "white",
-      backgroundImage: `url(${tick2})`,
+      backgroundImage: `url(${tick})`,
       //   backgroundImage:
       //     'url("https://www.freepngimg.com/download/green_tick/27895-7-green-tick-transparent.png")',
       backgroundSize: "18px 18px",
