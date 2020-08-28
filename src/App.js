@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
-import ButtonForward from "./Components/ButtonForward";
+import ButtonForward from "./Components/StyledButton";
 import TextFieldAmm from "./Components/TextFieldAmm";
 import Radio from "./Components/Radio";
 import StyledSlider from "./Components/StyledSlider";
 import SearchField from "./Components/SearchField";
+import CustomizedCheckbox from "./Components/StyledCheckbox";
 
 function App() {
   return (
