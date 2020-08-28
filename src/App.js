@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ButtonForward from "./Components/ButtonForward";
+import TextFieldAmm from "./Components/TextFieldAmm";
+import Radio from "./Components/Radio";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <br></br>
+      <ButtonForward text={"Your existing loan"}></ButtonForward>
+      <br></br>
+      <TextFieldAmm placeholder="$ 000 000"></TextFieldAmm>
+      <br></br>
+      <Radio></Radio>
     </div>
   );
 }
