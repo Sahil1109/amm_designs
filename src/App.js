@@ -3,6 +3,7 @@ import "./App.css";
 import ButtonForward from "./Components/ButtonForward";
 import TextFieldAmm from "./Components/TextFieldAmm";
 import Radio from "./Components/Radio";
+import StyledSlider from "./Components/StyledSlider";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <TextFieldAmm placeholder="$ 000 000"></TextFieldAmm>
       <br></br>
       <Radio></Radio>
+      <br></br>
+      <StyledSlider></StyledSlider>
     </div>
   );
 }
