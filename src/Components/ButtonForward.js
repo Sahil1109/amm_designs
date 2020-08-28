@@ -1,7 +1,5 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import Theme from "../Theme/Theme";
-import { makeStyles, styled } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { Submit } from "./ComponentStore";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";

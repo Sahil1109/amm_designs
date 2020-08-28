@@ -3,8 +3,6 @@ import React from "react";
 import { makeStyles, styled } from "@material-ui/core/styles";
 import Radio from "@material-ui/core/Radio";
 import clsx from "clsx";
-import Paper from "@material-ui/core/Paper";
-import InputBase from "@material-ui/core/InputBase";
 
 export const Submit = styled(Button)(() => ({
   background: "#10c71c",

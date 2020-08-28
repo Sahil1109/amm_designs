@@ -1,5 +1,4 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
 import StyledRadio from "./ComponentStore";
 
 export default function RadioButton() {
