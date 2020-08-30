@@ -6,11 +6,12 @@ import Radio from "./Components/Radio";
 import StyledSlider from "./Components/StyledSlider";
 import SearchField from "./Components/SearchField";
 import CustomizedCheckbox from "./Components/StyledCheckbox";
+import Register from "./Pages/Register";
 
 function App() {
   return (
     <div className="App">
-      <br></br>
+      {/* <br></br>
       <ButtonForward text={"Your existing loan"}></ButtonForward>
       <br></br>
       <TextFieldAmm placeholder="$ 000 000"></TextFieldAmm>
@@ -20,8 +21,9 @@ function App() {
       <StyledSlider></StyledSlider>
       <br></br>
       <SearchField></SearchField>
-      <br></br>
-    </div>
+      <br></br> */}
+      <Register></Register>
+    </div> 
   );
 }
 
