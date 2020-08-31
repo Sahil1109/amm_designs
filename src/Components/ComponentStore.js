@@ -3,13 +3,14 @@ import React from "react";
 import { makeStyles, styled } from "@material-ui/core/styles";
 import Radio from "@material-ui/core/Radio";
 import clsx from "clsx";
+import theme from "../Theme/Theme";
 
 export const Submit = styled(Button)(() => ({
-  background: "#10c71c",
+  background: theme.primary,
   width: "320px",
   textTransform: "none",
   "&:hover": {
-    background: "#13a81c",
+    background: theme.primary,
   },
 }));
 

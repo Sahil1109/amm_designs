@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
 import Tooltip from "@material-ui/core/Tooltip";
-
+import theme from "../Theme/Theme";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 280 + theme.spacing(3) * 2,
@@ -37,8 +37,8 @@ const YearSlider = withStyles({
   thumb: {
     height: 24,
     width: 24,
-    backgroundColor: "#13a81c",
-    border: "2px solid #13a81c",
+    backgroundColor: theme.primary,
+    border: "2px solid `${theme.primary}`",
     marginTop: -8,
     marginLeft: -12,
     "&:focus, &:hover, &$active": {
