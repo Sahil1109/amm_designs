@@ -1,14 +1,35 @@
 import React from "react";
-import Paper from "@material-ui/core/Paper";
-import InputBase from "@material-ui/core/InputBase";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import { fieldStyles } from "./StyledField";
+import StyledField, { fieldStyles } from "./StyledField";
 import LockIcon from "@material-ui/icons/Lock";
 export default function TextFieldAmm() {
   const classes = fieldStyles();
   return (
     <div>
-      <Paper elevation={0} className={classes.root}>
+      <StyledField
+        placeholder="0.00"
+        endAdornment={
+          <InputAdornment position="start" style={{marginRight:"250px"}}>
+            {/* <LockIcon></LockIcon>{" "} */}%
+          </InputAdornment>
+        }
+      ></StyledField>
+      <br></br>
+      <StyledField
+        placeholder="000 000"
+        startAdornment={<InputAdornment position="start">$</InputAdornment>}
+      ></StyledField>
+      <br></br>
+      <StyledField
+        placeholder="000 000"
+        startAdornment={<InputAdornment position="start">$</InputAdornment>}
+        endAdornment={
+          <InputAdornment position="start">
+            <LockIcon></LockIcon>{" "}
+          </InputAdornment>
+        }
+      ></StyledField>
+      {/* <Paper elevation={0} className={classes.root}>
         <InputBase
           className={classes.input}
           placeholder="000,000"
@@ -27,7 +48,7 @@ export default function TextFieldAmm() {
             </InputAdornment>
           }
         />
-      </Paper>
+      </Paper> */}
     </div>
 
     // <Paper elevation="0" className={classes.root}>
