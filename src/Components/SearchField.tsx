@@ -34,7 +34,7 @@ export default function SearchField() {
   const classes = useStyles();
 
   return (
-    <Paper component="form" elevation="1" className={classes.root}>
+    <Paper component="form" elevation={1} className={classes.root}>
       <InputBase
         className={classes.input}
         placeholder="Search Google Maps"

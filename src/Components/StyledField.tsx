@@ -1,6 +1,6 @@
 import React from "react";
 import Paper from "@material-ui/core/Paper";
-import InputBase from "@material-ui/core/InputBase";
+import InputBase, { InputBaseProps } from "@material-ui/core/InputBase";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField } from "@material-ui/core";
@@ -18,14 +18,15 @@ export const fieldStyles = makeStyles((theme) => ({
     flex: 1,
   },
 }));
-function StyledField(props) {
+function StyledField(props: InputBaseProps) {
   const classes = fieldStyles();
 
   return (
     <div>
       <Paper elevation={1} className={classes.root}>
         <InputBase
-          className={classes.input} {...props}
+          className={classes.input}
+          {...props}
           // startAdornment={<InputAdornment position="start">$</InputAdornment>}
         />
         {/* <TextField  className={classes.input} {...props} ></TextField> */}

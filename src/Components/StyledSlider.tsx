@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
-import Slider from "@material-ui/core/Slider";
+import { withStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import Slider  from "@material-ui/core/Slider";
 import Tooltip from "@material-ui/core/Tooltip";
 import theme from "../Theme/Theme";
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: 280 + theme.spacing(3) * 2,
   },
@@ -12,8 +12,13 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(3),
   },
 }));
+interface Props {
+  children: React.ReactElement;
+  open: boolean;
+  value: number;
+}
 
-function ValueLabelComponent(props) {
+function ValueLabelComponent(props: Props) {
   const { children, open, value } = props;
 
   return (
@@ -37,7 +42,7 @@ const YearSlider = withStyles({
   thumb: {
     height: 24,
     width: 24,
-    backgroundColor: theme.primary,
+    backgroundColor: "#10c71c",
     border: "2px solid `${theme.primary}`",
     marginTop: -8,
     marginLeft: -12,
@@ -68,7 +73,7 @@ export default function StyledSlider() {
       <div className={classes.margin} />
       <YearSlider
         valueLabelDisplay="auto"
-        aria-label="pretto slider"
+        aria-label="year slider"
         defaultValue={25}
         min={10}
         max={30}

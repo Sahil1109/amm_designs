@@ -1,10 +1,11 @@
 import React from "react";
 import StyledRadio from "./ComponentStore";
+import { RadioProps } from "@material-ui/core";
 
 export default function RadioButton() {
   const [selectedValue, setSelectedValue] = React.useState("a");
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     setSelectedValue(event.target.value);
     console.log(event.target.value);
   };

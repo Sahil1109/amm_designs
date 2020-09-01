@@ -5,6 +5,7 @@ import { Submit } from "./ComponentStore";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import StyledCheckbox from "./StyledCheckbox";
 import theme from "../Theme/Theme";
+import { ButtonProps } from "@material-ui/core";
 const useStyles = makeStyles({
   backButton: {
     backgroundColor: "rgb(237, 141, 24)",
@@ -22,7 +23,7 @@ const useStyles = makeStyles({
     width: "120px",
   },
 });
-function StyledButton(props) {
+function StyledButton(props: ButtonProps) {
   const classes = useStyles();
   const checkCheckbox = () => {
     console.log("Checked");
@@ -36,7 +37,7 @@ function StyledButton(props) {
           variant="contained"
           size="large"
         >
-          {props.text}
+          Your existing loan
         </Submit>
         <Submit
           endIcon={<ArrowForwardIcon />}

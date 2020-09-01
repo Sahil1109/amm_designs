@@ -1,16 +1,16 @@
 import Button from "@material-ui/core/Button";
 import React from "react";
 import { makeStyles, styled } from "@material-ui/core/styles";
-import Radio from "@material-ui/core/Radio";
+import Radio, { RadioProps } from "@material-ui/core/Radio";
 import clsx from "clsx";
 import theme from "../Theme/Theme";
 
 export const Submit = styled(Button)(() => ({
-  background: theme.primary,
+  background: "#10c71c",
   width: "320px",
   textTransform: "none",
   "&:hover": {
-    background: theme.primary,
+    background: "#10c71c",
   },
 }));
 
@@ -55,7 +55,7 @@ const useStyles = makeStyles({
   },
 });
 // Inspired by blueprintjs
-function StyledRadio(props) {
+function StyledRadio(props: RadioProps) {
   const classes = useStyles();
 
   return (

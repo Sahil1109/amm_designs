@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import Checkbox from "@material-ui/core/Checkbox";
+import Checkbox, { CheckboxProps } from "@material-ui/core/Checkbox";
 import tick from "./tick.png";
 const useStyles = makeStyles({
   root: {
@@ -53,7 +53,7 @@ const useStyles = makeStyles({
 });
 
 // Inspired by blueprintjs
-function StyledCheckbox(props) {
+function StyledCheckbox(props: CheckboxProps) {
   const classes = useStyles();
 
   return (

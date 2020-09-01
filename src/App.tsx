@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <br></br>
-      <ButtonForward text={"Your existing loan"}></ButtonForward>
+      <ButtonForward></ButtonForward>
       <br></br>
-      <TextFieldAmm placeholder="$ 000 000"></TextFieldAmm>
+      <TextFieldAmm></TextFieldAmm>
       <br></br>
       <Radio></Radio>
       <br></br>
