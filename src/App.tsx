@@ -13,8 +13,6 @@ import theme from "./Theme/Theme";
 function App() {
   return (
     <div className="App">
-      {/* <br></br>
-      <GoogleMaps></GoogleMaps> */}
       <br></br>
       <ButtonForward></ButtonForward>
       <br></br>
@@ -25,7 +23,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <StyledSlider></StyledSlider>
       </ThemeProvider>
-
+      <br></br>
+      <GoogleMaps></GoogleMaps>
       <br></br>
       <SearchField></SearchField>
       <br></br>

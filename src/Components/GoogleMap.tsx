@@ -7,6 +7,22 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import parse from "autosuggest-highlight/parse";
 import throttle from "lodash/throttle";
+import SearchField from "./SearchField";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    // padding: "4px 3px",
+    display: "flex",
+    alignItems: "center",
+    width: 320,
+    margin: "0 auto",
+  },
+  input: {
+    marginLeft: theme.spacing(1),
+    flex: 1,
+    color:"#fff"
+  },
+}));
 
 function loadScript(src: string, position: HTMLElement | null, id: string) {
   if (!position) {
@@ -22,12 +38,12 @@ function loadScript(src: string, position: HTMLElement | null, id: string) {
 
 const autocompleteService = { current: null };
 
-const useStyles = makeStyles((theme) => ({
-  icon: {
-    color: theme.palette.text.secondary,
-    marginRight: theme.spacing(2),
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   icon: {
+//     color: theme.palette.text.secondary,
+//     marginRight: theme.spacing(2),
+//   },
+// }));
 
 interface PlaceType {
   description: string;
@@ -118,7 +134,8 @@ export default function GoogleMaps() {
   return (
     <Autocomplete
       id="google-map-demo"
-      style={{ width: 300 }}
+      className={classes.input}
+      style={{ width: 350 }}
       getOptionLabel={(option) =>
         typeof option === "string" ? option : option.description
       }
@@ -139,7 +156,7 @@ export default function GoogleMaps() {
         <TextField
           {...params}
           label="Add a location"
-          variant="outlined"
+          variant="filled"
           fullWidth
         />
       )}
@@ -157,7 +174,7 @@ export default function GoogleMaps() {
         return (
           <Grid container alignItems="center">
             <Grid item>
-              <LocationOnIcon className={classes.icon} />
+              <LocationOnIcon />
             </Grid>
             <Grid item xs>
               {parts.map((part, index) => (

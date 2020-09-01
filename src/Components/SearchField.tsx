@@ -39,6 +39,7 @@ export default function SearchField() {
         className={classes.input}
         placeholder="Search Google Maps"
         inputProps={{ "aria-label": "search google maps" }}
+
       />
       <IconButton className={classes.iconButton} aria-label="search">
         <SearchIcon />
