@@ -1,20 +1,15 @@
 import Button from "@material-ui/core/Button";
 import React from "react";
-import { makeStyles, styled } from "@material-ui/core/styles";
+import { makeStyles, styled, Theme } from "@material-ui/core/styles";
 import Radio, { RadioProps } from "@material-ui/core/Radio";
 import clsx from "clsx";
-import theme from "../Theme/Theme";
+import theme from '../Theme/Theme';
 
-export const ForwardButton = styled(Button)(() => ({
-  background: "#10c71c",
+export const ForwardButton = styled(Button)({
   width: "320px",
   textTransform: "none",
-  "&:hover": {
-    background: "#10c71c",
-  },
-}));
-export const CancelButton = styled(Button)(() => ({
-  background: "#c4c2bb",
+});
+export const CancelButton = styled(Button)(({
   width: "120px",
   textTransform: "none",
 }));
@@ -44,8 +39,6 @@ const useStyles = makeStyles({
   },
   checkedIcon: {
     backgroundColor: "rgb(255,255,255)",
-    // backgroundImage:
-    //   "linear-gradient(hsla(0,0%,100%,.1),hsla(0,0%,100%,0))",
     "&:before": {
       display: "block",
       width: 16,
@@ -54,9 +47,6 @@ const useStyles = makeStyles({
       content: '""',
       margin: "1px",
     },
-    // "input:hover ~ &": {
-    //   backgroundColor: "#13a81c"
-    // }
   },
 });
 // Inspired by blueprintjs

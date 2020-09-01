@@ -36,13 +36,13 @@ ValueLabelComponent.propTypes = {
 
 const YearSlider = withStyles({
   root: {
-    color: "#10c71c",
+    // color: "#10c71c",
     height: 8,
   },
   thumb: {
     height: 24,
     width: 24,
-    backgroundColor: "#10c71c",
+    // backgroundColor: "#10c71c",
     border: "2px solid `${theme.primary}`",
     marginTop: -8,
     marginLeft: -12,

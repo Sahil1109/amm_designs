@@ -6,10 +6,15 @@ import Radio from "./Components/Radio";
 import StyledSlider from "./Components/StyledSlider";
 import SearchField from "./Components/SearchField";
 import CustomizedCheckbox from "./Components/StyledCheckbox";
+import GoogleMaps from "./Components/GoogleMap";
+import { ThemeProvider } from "@material-ui/core";
+import theme from "./Theme/Theme";
 
 function App() {
   return (
     <div className="App">
+      {/* <br></br>
+      <GoogleMaps></GoogleMaps> */}
       <br></br>
       <ButtonForward></ButtonForward>
       <br></br>
@@ -17,7 +22,10 @@ function App() {
       <br></br>
       <Radio></Radio>
       <br></br>
-      <StyledSlider></StyledSlider>
+      <ThemeProvider theme={theme}>
+        <StyledSlider></StyledSlider>
+      </ThemeProvider>
+
       <br></br>
       <SearchField></SearchField>
       <br></br>
