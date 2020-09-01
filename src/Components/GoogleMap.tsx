@@ -8,6 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import parse from "autosuggest-highlight/parse";
 import throttle from "lodash/throttle";
 import SearchField from "./SearchField";
+import InputBase from "@material-ui/core/InputBase";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
   input: {
     marginLeft: theme.spacing(1),
     flex: 1,
-    color:"#fff"
   },
 }));
 
@@ -153,11 +153,11 @@ export default function GoogleMaps() {
         setInputValue(newInputValue);
       }}
       renderInput={(params) => (
-        <TextField
-          {...params}
-          label="Add a location"
-          variant="filled"
-          fullWidth
+        <InputBase
+          ref={params.InputProps.ref}
+          {...params.inputProps}
+          placeholder="Search Google Maps"
+          inputProps={{ "aria-label": "search google maps" }}
         />
       )}
       renderOption={(option) => {
