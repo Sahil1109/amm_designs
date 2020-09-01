@@ -5,13 +5,18 @@ import Radio, { RadioProps } from "@material-ui/core/Radio";
 import clsx from "clsx";
 import theme from "../Theme/Theme";
 
-export const Submit = styled(Button)(() => ({
+export const ForwardButton = styled(Button)(() => ({
   background: "#10c71c",
   width: "320px",
   textTransform: "none",
   "&:hover": {
     background: "#10c71c",
   },
+}));
+export const CancelButton = styled(Button)(() => ({
+  background: "#c4c2bb",
+  width: "120px",
+  textTransform: "none",
 }));
 
 const useStyles = makeStyles({

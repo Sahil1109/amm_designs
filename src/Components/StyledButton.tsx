@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import { Submit } from "./ComponentStore";
+import { ForwardButton, CancelButton } from "./ComponentStore";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import StyledCheckbox from "./StyledCheckbox";
 import theme from "../Theme/Theme";
@@ -19,9 +19,6 @@ const useStyles = makeStyles({
   ok: {
     width: "120px",
   },
-  cancel: {
-    width: "120px",
-  },
 });
 function StyledButton(props: ButtonProps) {
   const classes = useStyles();
@@ -31,74 +28,64 @@ function StyledButton(props: ButtonProps) {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <Submit
+        <ForwardButton
           endIcon={<ArrowForwardIcon />}
           color="primary"
           variant="contained"
           size="large"
         >
           Your existing loan
-        </Submit>
-        <Submit
+        </ForwardButton>
+        <ForwardButton
           endIcon={<ArrowForwardIcon />}
           color="primary"
           variant="contained"
           size="large"
         >
           Get your approval
-        </Submit>
+        </ForwardButton>
         <br></br>
         <br></br>
-        <Submit
+        <ForwardButton
           startIcon={<ArrowBackIcon />}
           variant="contained"
           className={classes.backButton}
           size="large"
         >
           Revise my information
-        </Submit>
-        <Submit
+        </ForwardButton>
+        <ForwardButton
           color="primary"
           variant="contained"
           size="large"
           endIcon={<ArrowForwardIcon />}
         >
           Tailor a solution
-        </Submit>
+        </ForwardButton>
         <br></br>
         <br></br>
-        <Submit
+        <ForwardButton
           color="primary"
           variant="contained"
           size="large"
           className={classes.ok}
         >
           Ok
-        </Submit>
-        <Submit
+        </ForwardButton>
+        <ForwardButton
           color="primary"
           variant="contained"
           size="large"
           endIcon={<ArrowForwardIcon />}
         >
           Add applicants
-        </Submit>
-        <Submit
-          color="secondary"
-          variant="contained"
-          size="large"
-          className={classes.cancel}
-        >
+        </ForwardButton>
+        <CancelButton color="secondary" variant="contained" size="large">
           Remove
-        </Submit>
-        <Submit
-          color="secondary"
-          className={classes.cancel}
-          variant="contained"
-          size="large"
-        >
+        </CancelButton>
+        <CancelButton color="secondary" variant="contained" size="large">
           Cancel/Remove
-        </Submit>
+        </CancelButton>
         <StyledCheckbox onChange={checkCheckbox}></StyledCheckbox>
       </div>
     </ThemeProvider>
