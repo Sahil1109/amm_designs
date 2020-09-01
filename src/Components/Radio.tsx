@@ -5,7 +5,7 @@ import { RadioProps } from "@material-ui/core";
 export default function RadioButton() {
   const [selectedValue, setSelectedValue] = React.useState("a");
 
-  const handleChange = (event: any) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
     console.log(event.target.value);
   };

@@ -20,6 +20,7 @@ export default function TextFieldAmm() {
       <NumberFormat
         customInput={StyledField}
         thousandSeparator={true}
+        defaultValue="000,000"
         prefix={"$"}
       />
       <br></br>
